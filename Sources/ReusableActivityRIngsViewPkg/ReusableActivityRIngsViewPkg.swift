@@ -23,7 +23,7 @@ extension Color{
 }
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
-struct ActivityRingView: View {
+public struct ActivityRingView: View {
     @Binding var progress: CGFloat
 
     var colors: [Color] = [Color.darkRed, Color.lightRed]
@@ -33,7 +33,7 @@ struct ActivityRingView: View {
         self.colors = colors
     }
         
-        var body: some View {
+      public  var body: some View {
             ZStack {
                 Color.black
                     .edgesIgnoringSafeArea(.all)
@@ -72,7 +72,7 @@ struct ActivityRingView: View {
 }
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
-struct ActivityRingsView:View{
+public struct ActivityRingsView:View{
     @Binding var numberOfRings:Int
     @Binding var progress1:CGFloat
     @Binding var progress2:CGFloat
@@ -123,7 +123,7 @@ struct ActivityRingsView:View{
     
     
     //var prog:CGFloat
-    var body: some View{
+   public var body: some View{
         switch numberOfRings{
         case 1:
             ZStack{
@@ -194,18 +194,18 @@ struct ActivityRingsView:View{
 }
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
-struct MyView : View{
+public struct MyView : View{
     @Binding var progress: CGFloat
     @Binding var width:CGFloat
    // var colours:[Color] = [Color.indigo, Color.white]
     var colours:[Color] = [Color.lightRed, Color.darkRed]
 
-    var body: some View {
+   public var body: some View {
         //var colours:[Color] = [Color.darkRed, Color.lightRed]
         
         var offSetVal = ((width / 2) * -1)
-        var numberOfRings = 2
-        if numberOfRings == 2{
+        
+        
             ZStack{
                 Circle()
                     .stroke(Color.outlineRed,lineWidth:10)
@@ -239,6 +239,6 @@ struct MyView : View{
                 // Text("\(offSetVal)")
                 
             }.frame(idealWidth: width, idealHeight: width, alignment: .center)
-        }
+        
     }
 }
