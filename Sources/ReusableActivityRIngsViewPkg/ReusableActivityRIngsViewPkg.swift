@@ -119,14 +119,15 @@ public struct ActivityRingsView:View{
     @Binding var progress5:CGFloat
     @Binding var progress6:CGFloat
     @Binding var progress7:CGFloat
+    
     @State private var noProgress:CGFloat = 0.0
     @State private var idealwidth1:CGFloat = 50.0
-    @State private var idealwidth2:CGFloat = 75.0
-    @State private var idealwidth3:CGFloat = 125.0
-    @State private var idealwidth4:CGFloat = 175.0
-    @State private var idealwidth5:CGFloat = 225.0
-    @State private var idealwidth6:CGFloat = 275.0
-    @State private var idealwidth7:CGFloat = 325.0
+    @State private var idealwidth2:CGFloat = 100.0
+    @State private var idealwidth3:CGFloat = 150.0
+    @State private var idealwidth4:CGFloat = 200.0
+    @State private var idealwidth5:CGFloat = 250.0
+    @State private var idealwidth6:CGFloat = 300.0
+    @State private var idealwidth7:CGFloat = 350.0   
     @State private var colors1: [Color]
     @State private var colors2: [Color]
     @State private var colors3: [Color]
